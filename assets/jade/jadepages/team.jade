@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+	div.team
+	section.container
+		div
+			h3 2014 Optimize Teams
+		div.imgwrap
+			img(src="/imgs/team.png" class="img-responsive center-block")
+		div.row
+			-var teams = ["Act Kind Today", " BlueLab Hagley Gap", " BlueLab India", " Blueprints for Pangaea", " Champions- Detroit", " Global Writing, Reading and Pen Pals", " Go Green Technologies LLC", " HotPlate", " InvestSocial", " JAM! - Ann Arbor", " ReaLife Magazine", " Permaculture Design Certification Course", " Politix", " Project Homeless", " ReSource", " RIME", " Roof Beelievers", " Slows Market", " STARR Movement", " Synapse", " The Ann Arbor Center for Self Sufficiency", " The Roundtable", " University Health Aid", " WakUpp!", " Wolverine Fitness", " You are Need", " You are Loved"]
+				each team in teams
+					div.col-sm-6.col-md-4
+						div.thumbnail
+							div.caption
+								h3= team

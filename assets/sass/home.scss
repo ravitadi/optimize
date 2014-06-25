@@ -1,0 +1,135 @@
+@font-face {
+  font-family: logo;
+  src: url("/fonts/Sketch_Block.ttf"); 
+  }
+
+@font-face{
+	font-family: dense;
+	src: url("/fonts/dense.ttf");
+}
+
+.logo {
+  font-family: logo;
+  font-size: 25px;
+  font-weight: bold;
+  color: blue; 
+  background:  url('/imgs/logo1.png') no-repeat;
+  background-size: contain;
+	height: 50px;
+	position: relative;
+	top: 5px;
+
+  div{
+		display:inline-block;
+  }
+  small{
+  	display:block;
+  	font-size: 16px;
+  }
+  }
+
+  a{display: block; width: 100%; height: 100%}
+
+.menu {
+  padding: 0;
+
+   >.row {
+    margin: 2% auto;
+		padding: 1%;
+		width: 90%;
+		background-color: rgba(255, 255, 255, 0.6);
+     >.col-md-3 a {
+      white-space: nowrap; 
+			color: #1b87e0;
+      }
+  	.subtitle {
+	    font-family: dense;
+			color: #0f4366;
+			font-size: 64px;
+			line-height: 64px;
+			padding:0;
+	    }
+	    .subtitle + div{
+	    	padding-top:10px;
+	    	line-height: 16px;
+	    }
+    }
+ }
+
+.container{
+	background-color: rgba(255,255,255,0.6);
+	margin-top: 5%;
+	p{
+		font-size: 18px;
+		line-height: 18px;
+	}
+}
+
+.team{
+	background: url('/imgs/home.png') no-repeat center center fixed;
+	background-size: cover;
+	position: absolute;
+	z-index: -10;
+	top:0;
+	width:100%;
+	height: 100%;
+}
+
+.title{
+  text-align: center;
+  font-family: logo;
+  font-size: 5em;
+  margin-top: 2%;
+   color: blue; 
+}
+
+.click{
+  max-width: 250px;
+  margin: 5% auto;
+  cursor:pointer;
+  >img{
+    width: 100%;
+  }
+}
+
+.umich {
+  background-image: url("/imgs/umich-logo.png");
+  width: 65px;
+  height: 65px;
+  display: inline-block;
+  vertical-align: top;
+  background-size: 74px;
+  background-repeat: no-repeat;
+  background-position: -9px -11px; }
+
+.text-center {
+  margin: 0 auto; }
+
+.row {
+  margin: 0px; }
+
+.form {
+  width: 65%;
+  min-width: 250px;
+  max-width: 550px;
+  margin: 0 auto; }
+
+.part {
+  margin: 2% auto; }
+
+.imgwrap {
+  width: 59%;
+  min-width: 250px;
+  margin: 0 auto;
+  max-width: 550px; }
+
+footer {
+  position: absolute;
+  text-align: center;
+  width: 100%; 
+  bottom:0;
+
+    img{
+      width: 100%;
+    }
+  }
