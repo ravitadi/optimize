@@ -6,21 +6,14 @@
   font-family: dense;
   src: url("/fonts/dense.ttf"); }
 
-.logo {
-  font-family: logo;
-  font-size: 25px;
-  font-weight: bold;
-  color: blue;
-  background: url("/imgs/logo1.png") no-repeat;
-  background-size: contain;
-  height: 50px;
-  position: relative;
-  top: 5px; }
-  .logo div {
-    display: inline-block; }
-  .logo small {
-    display: block;
-    font-size: 16px; }
+.mainlogo {
+  width: 65%;
+  min-width: 250px;
+  max-width: 750px;
+  text-align: center;
+  margin: 2% auto 0; }
+  .mainlogo img {
+    width: 100%; }
 
 a {
   display: block;
@@ -55,7 +48,7 @@ a {
     line-height: 18px; }
 
 .team {
-  background: url("/imgs/home.png") no-repeat center center fixed;
+  background: url("/imgs/bg.jpg") no-repeat center center fixed;
   background-size: cover;
   position: absolute;
   z-index: -10;
