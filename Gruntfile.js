@@ -73,10 +73,10 @@ module.exports= function(grunt){
 	 },
 	 watch:{
 	 	options: {
-	 		livereload:true
+	 		livereload: true
 	 	},
 	 	jade:{
-	 		files: ['assets/jade/**/*'],
+	 		files: ['assets/jade/*/*', 'assets/jade/jadepages/*/*'],
 	 		tasks: ['newer:copy'],
 	 		options:{
 	 			spawn: false

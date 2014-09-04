@@ -95,16 +95,6 @@ header{
 	}
 }
 
-.team{
-	background: url('/imgs/bg.jpg') no-repeat center center fixed;
-	background-size: cover;
-	position: absolute;
-	z-index: -10;
-	top:0;
-	width:100%;
-	height: 100%;
-}
-
 .title{
   text-align: center;
   font-family: logo;
@@ -114,14 +104,21 @@ header{
 }
 
 .click{
-
   margin: 5% auto;
   cursor:pointer;
   text-align: center;
   position: absolute;
-  bottom: 120px;
+  bottom: 150px;
   left:0;
   right: 0;
+  @media (max-width: 800px){
+        bottom:  initial;
+        top: 150px;
+      } 
+  @media (min-width: 800px) and (max-width: 1280px){
+        bottom:  initial;
+        top: 28%;
+      } 
   &:hover{
     transform:scale(1.2);
     -ms-transform:scale(1.2); /* IE 9 */
@@ -132,9 +129,16 @@ header{
     -webkit-transition: all, 300ms;
     -moz-transition: all, 300ms;
    }
-  >img{
-    width: 100%;
-  }
+   >a{
+     >img{
+      @media (max-width: 800px){
+        max-height: 75px;
+      } 
+       @media (min-width:800px) and (max-width: 1280px){
+        max-height: 125px;
+      } 
+     }
+   }
 }
 
 .content{
