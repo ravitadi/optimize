@@ -8,27 +8,27 @@ block content
 				span.icn.fb
 			a(href="http://www.twitter.com/optimizemi" alt="Optimize Twitter Link")
 				span.icn.twt
-	div
+	div.main
 		div.mainlogo
-			img(src="/imgs/bg_2.jpg" alt="logo why not met?")
-		div.click
-			a#playbtn.fancybox(href='https://www.youtube.com/watch?v=tIcvSc2cxGs&autoplay=1&controls=0')
-				img(src="/imgs/playbtn.png" alt='play video button')
+			div.bg
+				img(src="/imgs/bg_2.jpg" alt="logo why not met?")
+			div.click
+				a#playbtn.fancybox(href='https://www.youtube.com/watch?v=tIcvSc2cxGs&autoplay=1&controls=0')
+					img(src="/imgs/playbtn.png" alt='play video button')
 		div.content.text-center
 			h2 Join the movement. 
 			p.lead We leverage the energy of thousands of students to take on our world's most preceding challenges. Our mentor community includes leaders in bussiness, nonprofits, and academia. 
 			p.lead Will you change the world with us?
 		div.form
-			form.form-horizontal
+			form.form-horizontal(action="subscribe" method="POST")
 				div.form-group
-					input.form-control(type="text" placeholder="Name")
+					input.form-control(type="text" name="name" placeholder="Name")
 				div.form-group
-					input.form-control(type="email" placeholder="Email")
+					input.form-control(type="email" name="email" placeholder="Email")
 				div.form-group
-					input.form-control(type="textarea" placeholder="Tell us about your self")
+					input.form-control(type="textarea" name="desc" placeholder="Tell us about your self")
 				div.form-group
-					button.btn.btn-primary.text-center Submit
-
+					input.btn.btn-primary.text-center(type="submit" value="Subscribe") 
 	footer
 		div
 			span.umich | LSA
