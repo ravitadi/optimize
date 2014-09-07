@@ -42,7 +42,6 @@ function signUp(name, email, desc, callback){
 				console.log(error);
 				callback(error);
 			}else {
-				console.log('success');
 				callback(null, result);
 			}
 		});
@@ -59,7 +58,6 @@ app.post('/subscribe', function(req, res){
 			res.redirect('http://optimizemichigan.org');
 			return;
 		}
-		console.log("success")
 		res.locals.signerror="success";
 		res.redirect('http://optimizemichigan.org');
 	});
