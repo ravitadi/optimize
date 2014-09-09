@@ -17,7 +17,10 @@ block content
 					img(src="/imgs/playbtn.png" alt='play video button')
 		div.content.text-center
 			h2 Join the movement. 
-			p.lead We leverage the energy of thousands of students to take on our world's most preceding challenges. Our mentor community includes leaders in bussiness, nonprofits, and academia. 
+			p.
+				lead We leverage the energy of thousands of students to take on our world's most pressing challenges. 
+				<br>
+				Our mentor community includes leaders in business, nonprofits, and academia. 
 			p.lead Will you change the world with us?
 		div.form
 			form.form-horizontal(action="subscribe" method="POST")
@@ -26,7 +29,7 @@ block content
 				div.form-group
 					input.form-control(type="email" name="email" placeholder="Email")
 				div.form-group
-					input.form-control(type="textarea" name="desc" placeholder="Tell us about your self")
+					input.form-control(type="textarea" name="desc" placeholder="Tell us about yourself")
 				div.form-group
 					input.btn.btn-primary.text-center(type="submit" value="Subscribe") 
 	footer
