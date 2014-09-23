@@ -2,20 +2,24 @@
   font-family: logo;
   src: url("/fonts/Sketch_Block.ttf"); 
   }
-
-@font-face{
-	font-family: dense;
-	src: url("/fonts/dense.ttf");
-} */
+*/
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+@font-face {
+  font-family: dense;
+  src: url("/fonts/dense.ttf"); }
 header {
   width: 100%;
   height: 45px; }
   header .logo {
-    min-width: 215px;
     height: 100%;
     min-height: 50px;
     margin: 0.5% 2%;
-    background: url("/imgs/optimize_logo.png") no-repeat; }
+    background: url("/imgs/optimize_logo.png") no-repeat;
+    width: 250px; }
+    @media (max-width: 400px) {
+      header .logo {
+        background-size: 165px;
+        width: 165px; } }
   header .social {
     margin: 0.5% 2%;
     height: 100%; }
@@ -118,25 +122,21 @@ a {
     .click > a > img {
       max-height: 65px; } }
 
-.content h2 {
-  color: #47c1fd; }
-.content p {
-  color: #0f4366;
-  font-size: 1.6em;
-  line-height: 1.3em;
-  padding: 0 5%; }
+.content {
+  padding-bottom: 2%; }
 
 .umich {
   background-image: url("/imgs/umich-logo.png");
-  height: 65px;
+  height: 45px;
   display: inline-block;
   vertical-align: top;
   background-size: 74px;
   background-repeat: no-repeat;
   background-position: -9px -11px;
   padding-left: 65px;
-  font-size: 30px;
-  line-height: 35px; }
+  font-size: 45px;
+  line-height: 45px;
+  font-family: dense; }
 
 .text-center {
   margin: 0 auto; }
@@ -166,3 +166,23 @@ footer {
     color: #0f4366; }
   footer img {
     width: 100%; }
+
+section hgroup {
+  color: #339df4; }
+  section hgroup h1 {
+    font-size: 50px;
+    margin-bottom: 0; }
+  section hgroup h3 {
+    margin-top: 0;
+    font-size: 50px;
+    font-family: lobster; }
+section p {
+  color: #444;
+  font-size: 20px;
+  padding: 0 4%; }
+section .custom {
+  color: #03274C;
+  background: #ffd400;
+  font-size: 20px;
+  padding: 2% 3%;
+  border-radius: 0px; }

@@ -2,11 +2,14 @@
   font-family: logo;
   src: url("/fonts/Sketch_Block.ttf"); 
   }
+*/
+@import url(http://fonts.googleapis.com/css?family=Lobster);
+
 
 @font-face{
 	font-family: dense;
 	src: url("/fonts/dense.ttf");
-} */
+} 
 $lightblue: #47C1FD;
 $darkblue: #0f4366;
 header{
@@ -14,13 +17,17 @@ header{
   height: 45px;
 
   .logo{
-    min-width: 215px;
     height: 100%;
     min-height: 50px;
     margin: 0.5% 2%;
     background: url('/imgs/optimize_logo.png') no-repeat;
+    width: 250px;
+     @media (max-width: 400px) {
+      background-size: 165px;
+      width: 165px;
+    }
   }
-
+  
   .social{
     margin: 0.5% 2%;
     height: 100%;
@@ -152,28 +159,21 @@ header{
 }
 
 .content{
-  h2{
-    color: $lightblue;
-  }
-  p{
-    color: $darkblue;
-    font-size: 1.6em;
-    line-height: 1.3em;
-    padding: 0 5%;
-  }
+  padding-bottom: 2%;
 }
 
 .umich {
   background-image: url("/imgs/umich-logo.png");
-  height: 65px;
+  height: 45px;
   display: inline-block;
   vertical-align: top;
   background-size: 74px;
   background-repeat: no-repeat;
   background-position: -9px -11px; 
   padding-left: 65px;
-  font-size: 30px;
-  line-height: 35px;
+  font-size: 45px;
+  line-height: 45px;
+  font-family: dense;
 }
 
 .text-center {
@@ -209,3 +209,32 @@ footer {
       width: 100%;
     }
   }
+
+section{
+  hgroup{
+    color: #339df4;
+    h1{
+      font-size: 50px;
+      margin-bottom: 0;
+    }
+    h3{
+      margin-top: 0;
+      font-size: 50px;
+      font-family: lobster;
+    }
+  }
+
+  p{
+    color: #444;
+    font-size: 20px;
+    padding: 0 4%;
+  }
+
+  .custom{
+    color: #03274C;
+    background: #ffd400;
+    font-size: 20px;
+    padding: 2% 3%;
+    border-radius: 0px;
+  }
+}
