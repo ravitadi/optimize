@@ -53,7 +53,7 @@ header {
   z-index: 2; }
   #popup .imgcntr {
     width: 80%;
-    margin: 1% auto;
+    margin: 0 auto;
     max-width: 800px;
     top: 50%;
     position: absolute;
