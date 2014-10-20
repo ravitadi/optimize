@@ -76,7 +76,7 @@ module.exports= function(grunt){
 	 		livereload: true
 	 	},
 	 	jade:{
-	 		files: ['assets/jade/*/*', 'assets/jade/jadepages/*/*'],
+	 		files: ['assets/jade/*', 'assets/jade/jadepages/*/*'],
 	 		tasks: ['newer:copy'],
 	 		options:{
 	 			spawn: false
