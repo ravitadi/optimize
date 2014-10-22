@@ -90,8 +90,7 @@ header {
 .mainlogo {
   text-align: center;
   width: 100%;
-  overflow: hidden;
-  max-height: 550px;
+  max-height: 615px;
   position: relative; }
   .mainlogo div > img {
     width: 100%;
