@@ -54,6 +54,15 @@ header{
   }
 }
 
+#playbtn{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 70%;
+  height: 100px;
+  zoom: 0.7;
+}
+
 #popup{
   position: fixed;
   top: 0;

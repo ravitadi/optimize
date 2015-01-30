@@ -41,6 +41,14 @@ header {
     text-align: center;
     padding: 10% 15%; }
 
+#playbtn {
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 70%;
+  height: 100px;
+  zoom: 0.7; }
+
 #popup {
   position: fixed;
   top: 0;
@@ -229,5 +237,3 @@ section .custom {
   font-size: 20px;
   padding: 2% 3%;
   border-radius: 0px; }
-
-/*# sourceMappingURL=home.css.map */
