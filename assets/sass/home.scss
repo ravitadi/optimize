@@ -4,14 +4,15 @@
   }
 */
 @import url(http://fonts.googleapis.com/css?family=Lobster);
-
+$lightblue: #47C1FD;
+$darkblue: #0f4366;
 
 @font-face{
 	font-family: dense;
 	src: url("/fonts/dense.ttf");
 } 
-$lightblue: #47C1FD;
-$darkblue: #0f4366;
+
+
 header{
   width: 100%;
   height: 45px;

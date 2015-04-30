@@ -1,10 +1,10 @@
 module.exports= function(grunt){
 	var portnum = 8000
 	require('load-grunt-tasks')(grunt, {scope: 'devDependencies'});
-	
+
 	grunt.initConfig({
 	 pkg: grunt.file.readJSON('package.json'),
-	 
+
     nodemon:{
         dev:{
             script:'app.js'
@@ -13,10 +13,10 @@ module.exports= function(grunt){
     imagemin:{
     	dynamic:{
 		  	files: [{
-		      expand: true,                 
-		      cwd: 'assets/imgs/',                   
-		      src: ['*.{png,gif,jpg}'],  
-		      dest: 'app/imgs/'                
+		      expand: true,
+		      cwd: 'assets/imgs/',
+		      src: ['*.{png,gif,jpg}'],
+		      dest: 'app/imgs/'
 		    }]
     	}
     },
@@ -29,7 +29,7 @@ module.exports= function(grunt){
             	{expand:true, cwd:'bower_components', src:['*/**'], dest:'app/', filter: 'isFile'},
             	{expand:true, cwd:'assets/css', src:['*'], dest:'app/css/', filter: 'isFile'},
             	]
-        }  
+        }
     },
 	 htmlmin:{
 	 		dist:{
@@ -107,15 +107,14 @@ module.exports= function(grunt){
     concurrent:{
         target1: ['newer:sass', 'newer:copy'],
         target2: ['newer:uglify:my_target'],
-        target3:{ 
+        target3:{
                 tasks:['nodemon', 'watch'],
                 options:{
                     logConcurrentOutput : true
                  }
             }
     }
-        
+
 	});
-	
 	grunt.registerTask('default',['newer:imagemin','concurrent:target1','concurrent:target2', 'concurrent:target3']);
 };
