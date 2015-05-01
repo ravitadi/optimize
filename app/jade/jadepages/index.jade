@@ -8,59 +8,53 @@ block content
 				span.icn.fb
 			a(href="http://www.twitter.com/optimizemi" alt="Optimize Twitter Link")
 				span.icn.twt
-	//-xdiv#popup
-		div.closebtn
-			a#close(href="javascript:void(0)") X Close
-		div.imgcntr
-			a(href="https://optimizemi.wufoo.com/forms/optimize-social-innovation-challenge-2015/") 
-				img(src="/imgs/popup.png"  width="800" height="500" alt="Social Change Challenge for summer")
-	section.main
+	section
 		div.mainlogo
 			div.bg
-			div.x
-				a#playbtn.fancybox(href='https://www.youtube.com/watch?v=tIcvSc2cxGs&autoplay=1&controls=0')
-					img(src="/imgs/playbtn.png" alt='play video button')
-		//- div.content.text-center
-		//- 	h2 Join the movement. 
-		//- 	p.lead.
-		//- 		We leverage the energy of thousands of students to take on our world's most pressing challenges. 
-		//- 		<br>
-		//- 		Our mentor community includes leaders in business, nonprofits, and academia. 
-		//- 	p.lead Will you change the world with us?
-		//- div.form
-		//- 	form.form-horizontal(action="subscribe" method="POST")
-		//- 		div.form-group
-		//- 			input.form-control(type="text" name="name" placeholder="Name")
-		//- 		div.form-group
-		//- 			input.form-control(type="email" name="email" placeholder="Email")
-		//- 		div.form-group
-		//- 			input.form-control(type="textarea" name="desc" placeholder="Tell us about your self")
-		//- 		div.form-group
-					input.btn.btn-primary.text-center(type="submit" value="Subscribe") 
-		section.container-fluid.content
-			div.row
-				div.col-md-8.text-center.row
-					div.col-md-6
-						hgroup
-							h1 Are you a 
-							h3 student?
-						p Change is driven by ordinary people. So ask yourself, “Why not me?” We’re here to help you bring your ideas to life. Our community fuses principles of entrepreneurship, social justice, education, innovation, and sustainability. We’d love to chat and help you take the first steps.
-						a(target="_blank" href="https://docs.google.com/a/umich.edu/forms/d/15laPTlXf7g455zG6P2oXMGP8cKkUNWXIEGYHDOBnVik/viewform")
+				div.x
+					h2 Meet tommorow's innovators.
+					a#playbtn.fancybox(href='https://www.youtube.com/watch?v=tIcvSc2cxGs&autoplay=1&controls=0')
+						img.img-circle(src="/imgs/playbtn.png" alt='play video button')
+		div.container-fluid.content
+			div.text-center.row
+				div.col-md-7
+					hgroup
+						h1 Are you a 
+						h3 student?
+					p Change is driven by ordinary people. So ask yourself, “Why not me?” We’re here to help you bring your ideas to life. Our community fuses principles of entrepreneurship, social justice, education, innovation, and sustainability. We’d love to chat and help you take the first steps.
+					a(target="_blank" href="https://docs.google.com/a/umich.edu/forms/d/15laPTlXf7g455zG6P2oXMGP8cKkUNWXIEGYHDOBnVik/viewform")
 						button.btn.custom Get in touch
-					div.col-md-6
-						img(src="imgs", alt="Students learning")
-				div.col-md-6.text-center
+				div.col-md-5
+					img.img-rounded(src="/imgs/3.JPG", alt="Students learning")
+			div.text-center
+					hr
+					//- a(href="#") Checkout student stories here
+			div.text-center.row
+				div.col-md-5
+					img.img-rounded(src="/imgs/4.jpg" alt="teaching mentors")
+				div.col-md-7
 					hgroup
 						h1 Interested in  
 						h3 becoming a mentor?
 					p As leaders in business, nonprofits and education, our mentors invest their time to support students’ energy to take on our world’s pressing challenges. Mentors range in age from 22 to 75, and hold a wide variety of positions. Regardless of your age or job, we’d love to hear from you.  
 					a(target="_blank" href="https://docs.google.com/a/umich.edu/forms/d/16yaqDL8g8nr0cT7A_-f-Qttt9vJW4U3q4QfJaoanw-o/viewform")
 						button.btn.custom Get in touch
+		div.contact.form
+			form.form-horizontal(action="subscribe" method="POST")
+				fieldset
+					legend Optimize Newsletter
+					div.form-group
+						input.form-control(type="text" name="name" placeholder="Name")
+					div.form-group
+						input.form-control(type="email" name="email" placeholder="Email")
+					div.form-group.text-right
+						input.btn.btn-primary.text-center(type="submit" value="Subscribe") 
+
 	footer
-		div
+		div.footer-content
 			a(href="https://www.lsa.umich.edu/lsa/archives/ci.helpingstudentsmakeanimpact_ci.detail")
 				span.umich | LSA
 			div.email 
 				a(href="mailto:socialinnovators@umich.edu") socialinnovators@umich.edu
-		h5 © 2014, optiMize and UMich College of LSA. All Rights Reserved. 
+			h5 © 2015, optiMize and UMich College of LSA. All Rights Reserved. 
     

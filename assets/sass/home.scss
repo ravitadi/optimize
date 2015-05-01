@@ -1,21 +1,30 @@
-/* @font-face {
-  font-family: logo;
-  src: url("/fonts/Sketch_Block.ttf"); 
-  }
-*/
-@import url(http://fonts.googleapis.com/css?family=Lobster);
+@import 'reset';
+@import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap';
+@import url(https://fonts.googleapis.com/css?family=Lobster);
 $lightblue: #47C1FD;
 $darkblue: #0f4366;
 
 @font-face{
 	font-family: dense;
 	src: url("/fonts/dense.ttf");
-} 
+}
 
+img{
+  width: 100%;
+}
 
+a{display: block; width: 100%;}
+
+.row{
+  margin: 3% auto;
+}
+  
 header{
   width: 100%;
-  height: 45px;
+  height: 60px;
+  position: absolute;
+  z-index: 10;
+  background: rgba(245,245,245,0.4);
 
   .logo{
     height: 100%;
@@ -23,18 +32,42 @@ header{
     margin: 0.5% 2%;
     background: url('/imgs/optimize_logo.png') no-repeat;
     width: 250px;
-     @media (max-width: 400px) {
-      background-size: 165px;
-      width: 165px;
-    }
   }
-  
   .social{
-    margin: 0.5% 2%;
-    height: 100%;
+    position: relative;
+    top: 50%;
+    margin-top: -25px;
     >a{
       display: inline;
     }
+  }
+}
+
+.bg{
+  position: relative;
+  background-image: url("/imgs/1.png");
+  height: 625px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.x{
+  h2{
+    color: #fff;
+    font-weight: 900;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    right: 0;
+    font-size: 40px;
+  }
+  img{
+    width: auto;
   }
 }
 
@@ -59,9 +92,9 @@ header{
   position: absolute;
   right: 0;
   left: 0;
-  top: 70%;
+  top: 50%;
   height: 100px;
-  zoom: 0.7;
+  margin-top: -100px;
 }
 
 #popup{
@@ -126,33 +159,6 @@ header{
     height: inherit;
   }
 }
-  a{display: block; width: 100%; height: 100%}
-
-.menu {
-  padding: 0;
-
-   >.row {
-    margin: 2% auto;
-		padding: 1%;
-		width: 90%;
-		background-color: rgba(255, 255, 255, 0.6);
-     >.col-md-3 a {
-      white-space: nowrap; 
-			color: #1b87e0;
-      }
-  	.subtitle {
-	    font-family: dense;
-			color: #0f4366;
-			font-size: 64px;
-			line-height: 64px;
-			padding:0;
-	    }
-	    .subtitle + div{
-	    	padding-top:10px;
-	    	line-height: 16px;
-	    }
-    }
- }
 
 .container{
 	background-color: rgba(255,255,255,0.6);
@@ -181,18 +187,6 @@ header{
   right: 0;
   top: 55%;
 
-  // @media (max-width: 800px){
-  //       bottom:  initial;
-  //       top: 20%;
-  //     } 
-  // @media (min-width: 800px){
-  //       bottom:  initial;
-  //       top: 55%;
-  //     } 
-  // @media (max-width: 550px){
-  //       bottom:  initial;
-  //       top: 55%;
-  //     }
   &:hover{
     transform:scale(1.2);
     -ms-transform:scale(1.2); /* IE 9 */
@@ -224,7 +218,7 @@ header{
 
 .umich {
   background-image: url("/imgs/umich-logo.png");
-  height: 45px;
+  height: 60px;
   display: inline-block;
   vertical-align: top;
   background-size: 74px;
@@ -235,12 +229,6 @@ header{
   line-height: 45px;
   font-family: dense;
 }
-
-.text-center {
-  margin: 0 auto; }
-
-.row {
-  margin: 0px; }
 
 .form {
   width: 65%;
@@ -256,19 +244,6 @@ header{
   min-width: 250px;
   margin: 0 auto;
   max-width: 550px; }
-
-footer {
-  text-align: center;
-  width: 100%; 
-
-  >h5{
-    color: $darkblue;
-  }
-
-    img{
-      width: 100%;
-    }
-  }
 
 section{
   hgroup{
@@ -287,7 +262,6 @@ section{
   p{
     color: #444;
     font-size: 20px;
-    padding: 0 4%;
   }
 
   .custom{
@@ -296,5 +270,92 @@ section{
     font-size: 20px;
     padding: 2% 3%;
     border-radius: 0px;
+    margin: 0 0 3% 0;
+
+    &:hover{
+      color: #C3A92C;
+    }
   }
 }
+
+footer {
+  text-align: center;
+  width: 100%;
+  background-image: url('/imgs/footer.png');
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat; 
+  height: 365px;
+
+  .email{
+    a{
+      color: #fff;
+    }
+  }
+
+  >h5{
+    color: $darkblue;
+  }
+
+    img{
+      width: 100%;
+    }
+
+    .footer-content{
+      position: relative;
+      top: 50%;
+      color: #fff;
+    }
+}
+
+@media all and (max-width: 500px){
+
+  header{
+    height: 40px; 
+    .logo{
+      background-size: 165px;
+      width: 165px;
+    }
+    .social{
+      margin-top: -15px;
+    }
+  }
+
+  .icn{
+    width: 30px;
+    height: 30px;
+    background-size: 704px;
+  }
+  .fb{
+    background-position: -452px -162px;
+  }
+  .twt{
+    background-position: -84px -88px;
+  }
+  .bg{
+    height: 250px;
+    background-position: initial;
+    background-size: contain;
+  }
+
+  .x{
+    h2{
+      font-size: 22px;
+      top: 20%;
+    }
+    img{
+      zoom: 0.5;
+    }
+  }
+  #playbtn{
+    margin-top: auto;
+  }
+  .container-fluid{
+    padding: 0;
+  }
+
+  footer{
+    height: 250px;
+  }
+}
+
