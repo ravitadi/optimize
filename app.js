@@ -75,8 +75,8 @@ renderCorrectPage('/courses','courses');
 renderCorrectPage('/resources', 'resources');
 
 app.use(function(req, res) {
- res.send('Sorry the page your are looking for doesn\'t exist.'
- 	+'<a href="http://www.optimizemichigan.org">Please go to our homepage at optimizeMichigan.org', 404);
+ res.send('Sorry the page your are looking for doesn\'t exist. '
+ 	+'<br><a href="http://www.optimizemichigan.org">Please go to our homepage at optimizeMichigan.org', 404);
 });
 
 http.createServer(app).listen(app.get('port'), ipaddress, function(){

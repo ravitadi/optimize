@@ -1,8 +1,11 @@
 @import 'reset';
 @import '../../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap';
-@import url(https://fonts.googleapis.com/css?family=Lobster);
+//@import url(https://fonts.googleapis.com/css?family=Lobster);
+@import 'modules/_header';
+@import 'modules/_footer';
+@import 'lib/_flexbox';
+
 $lightblue: #47C1FD;
-$darkblue: #0f4366;
 
 @font-face{
 	font-family: dense;
@@ -13,41 +16,19 @@ img{
   width: 100%;
 }
 
-a{display: block; width: 100%;}
-
 .row{
   margin: 3% auto;
 }
-  
-header{
-  width: 100%;
-  height: 60px;
-  position: absolute;
-  z-index: 10;
-  background: rgba(245,245,245,0.4);
 
-  .logo{
-    height: 100%;
-    min-height: 50px;
-    margin: 0.5% 2%;
-    background: url('/imgs/optimize_logo.png') no-repeat;
-    width: 250px;
-  }
-  .social{
-    position: relative;
-    top: 50%;
-    margin-top: -25px;
-    >a{
-      display: inline;
-    }
-  }
+.btn{
+  border-radius: 0px;
 }
 
 .bg{
   position: relative;
-  background-image: url("/imgs/1.png");
-  height: 625px;
-  background-position: 50% 50%;
+  background-image: url("/imgs/1.jpg");
+  height: 650px;
+  background-position: 50% -260px;
   background-repeat: no-repeat;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -57,18 +38,24 @@ header{
 }
 
 .x{
-  h2{
+  h1{
     color: #fff;
-    font-weight: 900;
+    font-weight: bold;
     position: absolute;
     top: 100px;
     left: 0;
     right: 0;
-    font-size: 40px;
+    font-size: 60px;
   }
   img{
     width: auto;
   }
+}
+
+.about-text{
+  width: 75%;
+  margin: 0 auto;
+  padding: 2% 2%;
 }
 
 .closebtn{
@@ -131,29 +118,8 @@ header{
   }
 }
 
-.icn{
-  width: 50px;
-  height: 50px;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  background-image: url("/imgs/social.png");
-  background-size: 877px;
-  margin: 0px 5px;
-  cursor: pointer;
-  float: left;
-}
-.fb{
-  background-position: -552px -193px;
-}
-.twt{
-  background-position: -97px -104px;
-}
-
 .mainlogo{
   text-align: center;
-  width: 100%;
-  max-height: 615px;
-  position: relative;
   div > img{
     width: 100%;
     height: inherit;
@@ -233,7 +199,7 @@ header{
 .form {
   width: 65%;
   min-width: 250px;
-  max-width: 550px;
+  max-width: 350px;
   margin: 0 auto; }
 
 .part {
@@ -248,7 +214,7 @@ header{
 section{
   hgroup{
     color: #339df4;
-    h1{
+    h2{
       font-size: 50px;
       margin-bottom: 0;
     }
@@ -262,9 +228,10 @@ section{
   p{
     color: #444;
     font-size: 20px;
+    text-align: left;
   }
 
-  .custom{
+  .yellow-btn{
     color: #03274C;
     background: #ffd400;
     font-size: 20px;
@@ -273,69 +240,19 @@ section{
     margin: 0 0 3% 0;
 
     &:hover{
-      color: #C3A92C;
+     background: #E2C11F;
     }
   }
-}
-
-footer {
-  text-align: center;
-  width: 100%;
-  background-image: url('/imgs/footer.png');
-  background-size: cover;
-  background-position: 50% 50%;
-  background-repeat: no-repeat; 
-  height: 365px;
-
-  .email{
-    a{
-      color: #fff;
-    }
-  }
-
-  >h5{
-    color: $darkblue;
-  }
-
-    img{
-      width: 100%;
-    }
-
-    .footer-content{
-      position: relative;
-      top: 50%;
-      color: #fff;
-    }
 }
 
 @media all and (max-width: 500px){
-
-  header{
-    height: 40px; 
-    .logo{
-      background-size: 165px;
-      width: 165px;
+  section hgroup{
+    h1{
+      font-size: 36px;
     }
-    .social{
-      margin-top: -15px;
+    h3{
+      font-size: 36px;
     }
-  }
-
-  .icn{
-    width: 30px;
-    height: 30px;
-    background-size: 704px;
-  }
-  .fb{
-    background-position: -452px -162px;
-  }
-  .twt{
-    background-position: -84px -88px;
-  }
-  .bg{
-    height: 250px;
-    background-position: initial;
-    background-size: contain;
   }
 
   .x{
@@ -352,10 +269,6 @@ footer {
   }
   .container-fluid{
     padding: 0;
-  }
-
-  footer{
-    height: 250px;
   }
 }
 

@@ -28,6 +28,7 @@ module.exports= function(grunt){
             	{expand:true, cwd: 'assets/fonts', src:'*', dest:'app/fonts',filter:'isFile'},
             	{expand:true, cwd:'bower_components', src:['*/**'], dest:'app/', filter: 'isFile'},
             	{expand:true, cwd:'assets/css', src:['*'], dest:'app/css/', filter: 'isFile'},
+            	{expand:true, cwd:'assets/imgs', src:['*.ico'], dest:'app/imgs/', filter: 'isFile'},
             	]
         }
     },
@@ -58,14 +59,13 @@ module.exports= function(grunt){
 		    }]
      }
     },
-    
 	 sass:{
 	 	dist:{
 	 		files:[{
 	 			lineNumbers: true,
 	 			expand: true,
 	 			cwd: 'assets/sass/',
-	 			src: ['*.scss', '*.sass'],
+	 			src: ['**/*.scss', '**/*.sass'],
 	 			dest: 'app/css',
 	 			ext: '.css'
 	 		}]
