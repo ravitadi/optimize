@@ -5723,12 +5723,7 @@ header {
     background-position: -452px -162px; }
 
   .twt {
-    background-position: -84px -88px; }
-
-  .bg {
-    height: 250px;
-    background-position: initial;
-    background-size: contain; } }
+    background-position: -84px -88px; } }
 footer {
   color: blue;
   position: relative;
@@ -6009,6 +6004,9 @@ img {
   -o-background-size: cover;
   background-size: cover; }
 
+.about-text h3 {
+  line-height: 30px; }
+
 .x h1 {
   color: #fff;
   font-weight: bold;
@@ -6017,6 +6015,9 @@ img {
   left: 0;
   right: 0;
   font-size: 60px; }
+  .x h1 span {
+    color: #47c1fd;
+    display: block; }
 .x img {
   width: auto; }
 
@@ -6187,11 +6188,21 @@ section .yellow-btn {
   section hgroup h3 {
     font-size: 36px; }
 
-  .x h2 {
-    font-size: 22px;
-    top: 20%; }
+  .about-text {
+    width: 98%; }
+    .about-text h3 {
+      font-size: 20px; }
+
+  .x h1 {
+    font-size: 26px;
+    top: 15%; }
   .x img {
     zoom: 0.5; }
+
+  .bg {
+    height: 250px;
+    background-position: initial;
+    background-size: contain; }
 
   #playbtn {
     margin-top: auto; }

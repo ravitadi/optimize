@@ -37,6 +37,12 @@ img{
   background-size: cover;
 }
 
+.about-text{
+  h3{
+    line-height: 30px;
+  }
+}
+
 .x{
   h1{
     color: #fff;
@@ -46,6 +52,10 @@ img{
     left: 0;
     right: 0;
     font-size: 60px;
+    span{
+      color: $lightblue;
+      display: block;
+    }
   }
   img{
     width: auto;
@@ -254,15 +264,26 @@ section{
       font-size: 36px;
     }
   }
+  .about-text{
+    width: 98%;
+    h3{
+      font-size: 20px;
+    }
+  }
 
   .x{
-    h2{
-      font-size: 22px;
-      top: 20%;
+    h1{
+      font-size: 26px;
+      top: 15%;
     }
     img{
       zoom: 0.5;
     }
+  }
+  .bg{
+    height: 250px;
+    background-position: initial;
+    background-size: contain;
   }
   #playbtn{
     margin-top: auto;
