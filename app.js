@@ -47,6 +47,10 @@ function signUp(name, email, desc, callback){
 		});
 }
 
+//cache set
+app.use(express.static(__dirname + '/imgs', { maxAge: 86400000 }));
+app.use(express.static(__dirname + '/css', { maxAge: 86400000 }));
+app.use(express.static(__dirname + '/js', { maxAge: 86400000 }));
 
 renderCorrectPage('/','index');
 
