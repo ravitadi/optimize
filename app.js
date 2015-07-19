@@ -70,7 +70,8 @@ app.post('/subscribe', function(req, res){
 
 renderCorrectPage('/optimizeteam','optimizeteam');
 renderCorrectPage('/about','about');
-renderCorrectPage('/team','team');
+renderCorrectPage('/teams','teams');
+renderCorrectPage('/past-teams', 'past-teams');
 renderCorrectPage('/sponsors','sponsors');
 renderCorrectPage('/story','story');
 renderCorrectPage('/friends', 'friends');
@@ -79,8 +80,9 @@ renderCorrectPage('/courses','courses');
 renderCorrectPage('/resources', 'resources');
 
 app.use(function(req, res) {
- res.send('Sorry the page your are looking for doesn\'t exist. '
- 	+'<br><a href="http://www.optimizemichigan.org">Please go to our homepage at optimizeMichigan.org', 404);
+// res.send('Sorry, but the page you are looking for doesn\'t exist. '
+// 	+'<br><a href="/">Please return to our homepage.', 404);
+	res.render('error');
 });
 
 http.createServer(app).listen(app.get('port'), ipaddress, function(){
