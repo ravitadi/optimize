@@ -7,7 +7,7 @@ var bodyParser = require('body-parser')
 
 if (typeof ipaddress === "undefined") {
 	ipaddress = "127.0.0.1";
-	console.warn('No OPENSHIFT_NODEJS_IP var, using ' + ipaddress + ':' + app.get('port'));
+	console.warn('No OPENSHIFT_NODEJS_IP var, using ' + ipaddress + ':8000');
 }
 //console.log(__dirname);
 
@@ -38,7 +38,7 @@ function signUp(name, email, desc, callback){
 			send_welcome: true
 		};
 	 api.listSubscribe(data, function(error, result) {
-		if (error)i {
+		if (error) {
 			console.log(error);
 			callback(error);
 		} else {
