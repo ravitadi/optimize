@@ -1,15 +1,16 @@
 var express = require('express'),
-		http = require('http'),
-		app = express(),
-		ipaddress = process.env.OPENSHIFT_NODEJS_IP,
-	 	port = process.env.OPENSHIFT_NODEJS_PORT || 8000;
+	http = require('http'),
+	app = express(),
+	ipaddress = process.env.OPENSHIFT_NODEJS_IP,
+	port = process.env.OPENSHIFT_NODEJS_PORT || 8000;
 var bodyParser = require('body-parser')
 
- if (typeof ipaddress === "undefined") {
- 					console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1:8000');
-             ipaddress = "127.0.0.1";
- }
+if (typeof ipaddress === "undefined") {
+	ipaddress = "127.0.0.1";
+	console.warn('No OPENSHIFT_NODEJS_IP var, using ' + ipaddress + ':' + app.get('port'));
+}
 //console.log(__dirname);
+
 app.set('views', 'app/jade/jadepages');
 app.set('view engine', 'jade');
 app.set('port', port);
@@ -24,10 +25,10 @@ function render(path, page){
 
 function signUp(name, email, desc, callback){
 	var MailChimpAPI = require('mailchimp').MailChimpAPI,
-	    API_KEY = 'feff5c1e72c5294f3a3564f2c5c42386-us6',
+		API_KEY = 'feff5c1e72c5294f3a3564f2c5c42386-us6',
 		LIST_ID = '7a6ce43042';
-    var api = new MailChimpAPI(API_KEY , { version : '1.3', secure : false }),
-	    names = name.split(' '), status,
+	var api = new MailChimpAPI(API_KEY , { version : '1.3', secure : false }),
+		names = name.split(' '), status,
 		data = {
 			apikey: API_KEY,
 			id: LIST_ID,
@@ -36,15 +37,14 @@ function signUp(name, email, desc, callback){
 			double_optin: false,
 			send_welcome: true
 		};
-
 	 api.listSubscribe(data, function(error, result) {
-			if(error){
-				console.log(error);
-				callback(error);
-			}else {
-				callback(null, result);
-			}
-		});
+		if (error)i {
+			console.log(error);
+			callback(error);
+		} else {
+			callback(null, result);
+		}
+	});
 }
 
 //cache set
@@ -67,7 +67,7 @@ app.post('/subscribe', function(req, res){
 	});
 });
 
-
+// Paths with matching pages in ./app/jade/jadepages
 render('/optimizeteam','optimizeteam');
 render('/about','about');
 render('/teams','teams');
@@ -79,12 +79,12 @@ render('/social','social');
 render('/courses','courses');
 render('/resources', 'resources');
 
+// 404 page in ./app/jade/jadepages
 app.use(function(req, res) {
-// res.send('Sorry, but the page you are looking for doesn\'t exist. '
-// 	+'<br><a href="/">Please return to our homepage.', 404);
 	res.render('error');
 });
 
+// Start the server
 http.createServer(app).listen(app.get('port'), ipaddress, function(){
-  console.log("Express server listening on port " + app.get('port'));
+	console.log("Express server listening on port " + app.get('port'));
 });
