@@ -2,7 +2,7 @@ var express = require('express'),
 	http = require('http'),
 	app = express(),
 	ipaddress = process.env.OPENSHIFT_NODEJS_IP,
-	port = process.env.OPENSHIFT_NODEJS_PORT || 8000;
+	port = process.env.PORT || 8000;
 var bodyParser = require('body-parser')
 
 if (typeof ipaddress === "undefined") {
