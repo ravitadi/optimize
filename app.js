@@ -1,18 +1,15 @@
-////////////////////////////
-
 // Header variables and functions
 var express = require('express'),
 	http = require('http'),
 	app = express(),
-	ipaddress = process.env.OPENSHIFT_NODEJS_IP,
+	ip_addr = process.env.OPENSHIFT_NODEJS_IP,
 	port = process.env.PORT || 8000;
 var bodyParser = require('body-parser')
 
-if (typeof ipaddress === "undefined") {
-	ipaddress = "127.0.0.1";
-	console.warn('No OPENSHIFT_NODEJS_IP var, using ' + ipaddress + ':8000');
+if (typeof ip_addr === "undefined") {
+	ip_addr = "localhost";
+	console.warn('No OPENSHIFT_NODEJS_IP environment variable is set!');
 }
-//console.log(__(;
 
 app.set('views', 'app/jade/jadepages');
 app.set('view engine', 'jade');
@@ -26,8 +23,6 @@ function render(path, page){
                 resp.render(page);
         });
 }
-
-////////////////////////////
 
 // Pages to render (located in ./app/jade/jadepages)
 render('/','index');
@@ -52,11 +47,11 @@ app.post('/subscribe', function(req, res){
         signUp(name,email, desc, function(err, result){
                 if(err){
                         res.locals.signerror="error";
-                        res.redirect('http://optimizemichigan.org');
+                        res.redirect('/');
                         return;
                 }
                 res.locals.signerror="success";
-                res.redirect('http://optimizemichigan.org');
+                res.redirect('/');
         });
 });
 
@@ -66,6 +61,9 @@ function signUp(name, email, desc, callback){
         var MailChimpAPI = require('mailchimp').MailChimpAPI,
                 API_KEY = 'feff5c1e72c5294f3a3564f2c5c42386-us6',
                 LIST_ID = '7a6ce43042';
+	//
+	console.log(names);
+	//
         var api = new MailChimpAPI(API_KEY , { version : '1.3', secure : false }),
                 names = name.split(' '), status,
                 data = {
@@ -88,10 +86,10 @@ function signUp(name, email, desc, callback){
 
 // 404 page in ./app/jade/jadepages
 app.use(function(req, res) {
-        res.render('error');
+	res.render('error');
 });
 
 // Start the server
-http.createServer(app).listen(app.get('port'), ipaddress, function(){
-	console.log("Express server listening on port " + app.get('port'));
+http.createServer(app).listen(port, ip_addr, function(){
+	console.log('Express server listening at: http://' + ip_addr + ':' + port);
 });
