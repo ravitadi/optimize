@@ -3,6 +3,7 @@ var express = require('express'),
 		app = express(),
 		ipaddress = process.env.OPENSHIFT_NODEJS_IP,
 	 	port = process.env.OPENSHIFT_NODEJS_PORT || 8000;
+var bodyParser = require('body-parser')
 
  if (typeof ipaddress === "undefined") {
  					console.warn('No OPENSHIFT_NODEJS_IP var, using 127.0.0.1:8000');
@@ -13,10 +14,9 @@ app.set('views', 'app/jade/jadepages');
 app.set('view engine', 'jade');
 app.set('port', port);
 app.use('/', express.static('app/'));
-app.use(express.json());
-app.use(express.bodyParser())
+app.use(bodyParser.json());
 
-function renderCorrectPage(path, page){
+function render(path, page){
 	app.get(path, function(req, resp){
 		resp.render(page);
 	});
@@ -52,7 +52,7 @@ app.use(express.static(__dirname + '/imgs', { maxAge: 86400000 }));
 app.use(express.static(__dirname + '/css', { maxAge: 86400000 }));
 app.use(express.static(__dirname + '/js', { maxAge: 86400000 }));
 
-renderCorrectPage('/','index');
+render('/','index');
 
 app.post('/subscribe', function(req, res){
 	var name = req.body.name, email = req.body.email, desc = req.body.desc;
@@ -68,16 +68,16 @@ app.post('/subscribe', function(req, res){
 });
 
 
-renderCorrectPage('/optimizeteam','optimizeteam');
-renderCorrectPage('/about','about');
-renderCorrectPage('/teams','teams');
-renderCorrectPage('/past-teams', 'past-teams');
-renderCorrectPage('/sponsors','sponsors');
-renderCorrectPage('/story','story');
-renderCorrectPage('/friends', 'friends');
-renderCorrectPage('/social','social');
-renderCorrectPage('/courses','courses');
-renderCorrectPage('/resources', 'resources');
+render('/optimizeteam','optimizeteam');
+render('/about','about');
+render('/teams','teams');
+render('/past-teams', 'past-teams');
+render('/sponsors','sponsors');
+render('/story','story');
+render('/friends', 'friends');
+render('/social','social');
+render('/courses','courses');
+render('/resources', 'resources');
 
 app.use(function(req, res) {
 // res.send('Sorry, but the page you are looking for doesn\'t exist. '
