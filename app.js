@@ -3,7 +3,7 @@ var express = require('express'),
 	http = require('http'),
 	app = express(),
 	ip_addr = process.env.OPENSHIFT_NODEJS_IP,
-	port = process.env.PORT || 8000;
+	port = process.env.OPENSHIFT_NODEJS_PORT || process.env.PORT || 8000;
 var bodyParser = require('body-parser')
 
 if (typeof ip_addr === "undefined") {
