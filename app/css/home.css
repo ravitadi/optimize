@@ -5997,7 +5997,7 @@ img {
 
 .bg {
   position: relative;
-  background-image: url("/imgs/1.jpg");
+  //background-image: url("/imgs/1.jpg");
   height: 650px;
   background-position: 50% 85%;
   background-repeat: no-repeat;

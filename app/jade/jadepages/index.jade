@@ -8,15 +8,22 @@ block content
 				span.icn.fb
 			a(href="http://www.twitter.com/optimizemi" title="Optimize Twitter Link")
 				span.icn.twt
+		<link href="http://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
+		<script src="http://vjs.zencdn.net/4.12/video.js"></script>
+		<style type="text/css">
+		.vjs-default-skin .vjs-control-bar,
+		.vjs-default-skin .vjs-big-play-button { background: rgba(0,0,0,0) }
+		.vjs-default-skin .vjs-slider { background: rgba(0,0,0,0) }
+		</style>
+		<style>.video-js {padding-top: 56.25%}
+		.vjs-fullscreen {padding-top: 0px}</style>
 	section
 		div.mainlogo
-			div.bg
-				div.x
-					h1
-						span Meet tomorrow's 
-						| innovators
-					a#playbtn.fancybox(href='https://www.youtube.com/watch?v=tIcvSc2cxGs&autoplay=1&controls=0')
-						img.img-circle(src="/imgs/playbtn.png" alt='play video button')
+			<video id="optimize" class="video-js vjs-default-skin video-js-fullscreen" controls preload="auto" width="auto" height="auto" poster="imgs/1.jpg" data-setup="{}">
+			<source src="https://s3.amazonaws.com/optimizemi/optimize_1080.mp4" type='video/mp4'>
+			<source src="https://s3.amazonaws.com/optimizemi/optimize.webm" type='video/webm'>
+			</video>
+
 		div.about-text.text-center
 			h3 We are a social innovation community at University of Michigan. <br>
 				| By students, for students, supported by @umichlsa and our community of mentors. <br>
