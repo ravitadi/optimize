@@ -1,0 +1,15 @@
+extends ../layout
+
+block content
+	section.container
+		h3 Get in touch!
+		div.form
+		 	form.form-horizontal(action="subscribe" method="POST")
+		 		div.form-group
+		 			input.form-control(type="text" name="name" placeholder="Name")
+		 		div.form-group
+		 			input.form-control(type="email" name="email" placeholder="Email")
+		 		div.form-group
+		 			input.form-control(type="textarea" name="message" placeholder="What's your story?")
+		 		div.form-group
+					input.btn.btn-primary.text-center(type="submit" value="Send")
