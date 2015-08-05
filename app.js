@@ -1,4 +1,5 @@
 'use strict';
+
 var express = require('express'),
 		http = require('http'),
 		app = express(),
@@ -21,6 +22,7 @@ app.use(express.bodyParser());
 app.use(express.static(__dirname + '/imgs', { maxAge: 86400000 }));
 app.use(express.static(__dirname + '/css', { maxAge: 86400000 }));
 app.use(express.static(__dirname + '/js', { maxAge: 86400000 }));
+
 //show home page here
 renderCorrectPage('/','home');
 
