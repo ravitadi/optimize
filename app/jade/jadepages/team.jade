@@ -9,7 +9,7 @@ block content
 				each team in teams
 					div.col-sm-6.col-md-4.teamcntr
 						div.thumbnail
-							-var imgurl= team.teamName.replace(/ /g, '_');
+							-var imgurl= team.teamName.replace(/ /g, '_').toLowerCase();
 							img(src='/imgs/optimize_teamlogos_2015/'+imgurl+'.png', alt=team.teamName+" team image")
 							div.caption
 								h3= team.teamName
