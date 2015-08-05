@@ -15,7 +15,7 @@ module.exports= function(grunt){
 		  	files: [{
 		      expand: true,
 		      cwd: 'assets/imgs/',
-		      src: ['*.{png,gif,jpg,JPG}'],
+		      src: ['**/*.{png,gif,jpg,JPG}'],
 		      dest: 'app/imgs/'
 		    }]
     	}
@@ -29,6 +29,7 @@ module.exports= function(grunt){
             	{expand:true, cwd:'bower_components', src:['*/**'], dest:'app/', filter: 'isFile'},
             	{expand:true, cwd:'assets/css', src:['*'], dest:'app/css/', filter: 'isFile'},
             	{expand:true, cwd:'assets/imgs', src:['*.ico'], dest:'app/imgs/', filter: 'isFile'},
+							{expand:true, cwd:'assets/data', src:['*.json'], dest:'app/data/', filter: 'isFile'}
             	]
         }
     },
